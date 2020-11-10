@@ -1,0 +1,202 @@
+@import vars, mixins
+
+.header
+  min-height: 98px
+  background-color: $background
+  border-bottom: 1px solid $border
+  &__container
+    max-width: $MaxWidth
+    +flexSbC
+    padding: 24px 0
+    position: relative
+    margin: 0 auto
+  &__block
+    +flexCC
+
+.logo
+  +flexAiC
+  &__image
+    pointer-events: none
+    margin-right: 12px
+  &__text
+    +textCSWH($RifleGreen, 27px, 300, 25px)
+    text-transform: uppercase
+    padding-top: 1px
+    &_brand
+      color: $brandMain
+      font-weight: 700
+
+.browse
+  border-radius: 3px 0 0 3px
+  position: relative
+  margin-left: 42px
+  &[open] > .browse__dropdown
+    display: flex
+  &[open] > .browse__summary .fa
+    transform: rotateZ(-180deg)
+    color: $brandMain
+    margin-top: 0
+  &[open] > .browse__summary:active .fa
+    transform: rotateZ(-90deg)
+  &__summary
+    cursor: pointer
+    height: 38px
+    +textCSW($text, 14px, 400)
+    background-image: linear-gradient(180deg, white 0%, $WhiteSmoke 100%)
+    border: 1px solid $border
+    border-radius: 3px 0 0 3px
+    +flexAiC
+    padding: 8px 14px
+    position: relative
+    &:hover
+      background-image: linear-gradient(180deg, white 0%, $Snow 100%)
+    &:active > .fa
+      transform: rotateZ(-90deg)
+    & .fa
+      +textCSW($DarkGray, 14px, 400)
+      margin: 2px 0 0 10px
+  &__dropdown
+    top: 48px
+    &_elem
+      margin-top: 12px
+      &:first-of-type
+        margin-top: 0
+
+.search
+  background-color: $background
+  +flexAiC
+  &__field
+    width: 280px
+    height: 38px
+    border-top: 1px solid $border
+    border-bottom: 1px solid $border
+    padding: 0 12px
+  &__button
+    cursor: pointer
+    width: 38px
+    height: 38px
+    +textCSW($DarkGray, 14px, 400)
+    background-image: linear-gradient(180deg, white 0%, $WhiteSmoke 100%)
+    border: 1px solid $border
+    border-radius: 0 3px 3px 0
+    +flexCC
+    &:hover
+      background-image: linear-gradient(180deg, white 0%, $Snow 100%)
+    &:active
+      color: $brandMain
+
+.h-cart
+  width: 32px
+  height: 29px
+  +flexCC
+  padding-top: 3px
+  position: relative
+  margin-right: 25px
+  &__icon
+    overflow: hidden
+    width: 32px
+    height: 29px
+    &:hover > .cart-icon
+      stroke: $brandMain
+      fill: $background
+    &:hover > .h-cart__count
+      background-color: $background
+      border: 1px solid $brandMain
+    &:hover > .h-cart__count .h-cart__count_text
+      color: $brandMain
+    &:active > .cart-icon
+      stroke: none
+      fill: $brandMain
+    &:active > .h-cart__count
+      background-color: $brand
+      border: none
+    &:active > .h-cart__count .h-cart__count_text
+      color: white
+  &__count
+    overflow: hidden
+    width: 20px
+    height: 20px
+    background-color: $brand
+    border-radius: 50%
+    +flexCC
+    +absoluteTL(-8px, 20px)
+    &_text
+      +textCSW(white, 12px, 700)
+      margin-top: -1px
+  &__dropdown
+    cursor: default
+    padding: 20px 16px
+    +absoluteTL(44px, -98px)
+    .dropdown__triangle
+      left: 112px
+      &_shadow
+        left: 114px
+  &__total
+    +textCSWH($text, 16px, 700, 16px)
+    text-transform: uppercase
+    +flexJcSb
+
+.h-product
+  width: 234px
+  min-height: $ProductHeightS
+  border-bottom: 1px solid $border
+  display: flex
+  padding-bottom: 12px
+  margin-bottom: 16px
+  &__link
+    display: flex
+    margin-right: 8px
+    &:hover
+      +shadow-medium
+    &:hover > .h-product__image
+      filter: brightness(50%)
+    &:active
+      +shadow-press
+  &__image
+    width: $ProductWidthS
+  &__description
+    width: 228px - $ProductWidthS - 14px
+    text-transform: uppercase
+    +flexDirCol
+    padding: 10px 8px 10px 12px
+  &__title
+    +textCSWH($text, 12px, 700, 12px)
+    margin-bottom: 8px
+  &__rating
+    +textCSWH($rating, 12px, 400, 12px)
+    margin-bottom: 10px
+  &__size
+    +textCSWH($text, 10px, 400, 10px)
+    margin-bottom: 6px
+  &__price
+    +textCSWH($brandMain, 10px, 400, 10px)
+    & .fa
+      margin-left: 2px
+  &__delete
+    +flexAiC
+  &__remove
+    cursor: pointer
+    overflow: hidden
+    height: 14px
+    +textCSW($Silver, 16px, 400)
+    border-radius: 50%
+    display: flex
+    &:hover
+      color: $brandMain
+      filter: saturate(115%)
+    &:active
+      color: $brandMain
+      filter: saturate(85%)
+    & .fa
+      margin-top: -1px
+
+.button
+  &__checkout, &__go-to-cart
+    width: 228px
+    height: 48px
+  &__checkout
+    text-transform: uppercase
+    margin: 28px auto 12px
+  &__account
+    padding: 11px 20px
+    margin-left: 12px

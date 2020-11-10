@@ -1,0 +1,68 @@
+@import vars
+
+=flexDirCol()
+  display: flex
+  flex-direction: column
+
+=flexJcSb()
+  display: flex
+  justify-content: space-between
+
+=flexJcC()
+  display: flex
+  justify-content: center
+
+=flexAiC()
+  display: flex
+  align-items: center
+
+=flexSbC()
+  +flexJcSb
+  align-items: center
+
+=flexCC()
+  +flexJcC
+  align-items: center
+
+
+=absoluteTL($top, $left)
+  position: absolute
+  top: $top
+  left: $left
+
+=absoluteTR($top, $right)
+  position: absolute
+  top: $top
+  right: $right
+
+=absoluteBL($bottom, $left)
+  position: absolute
+  bottom: $bottom
+  left: $left
+
+=absoluteBR($bottom, $right)
+  position: absolute
+  bottom: $bottom
+  right: $right
+
+
+=textCSW($color, $size, $weight)
+  color: $color
+  font-size: $size
+  font-weight: $weight
+
+=textCSWH($color, $size, $weight, $height)
+  color: $color
+  font-size: $size
+  font-weight: $weight
+  line-height: $height
+
+
+=shadow-press()
+  box-shadow: 0 0 1px 0 $shadow
+
+=shadow-medium()
+  box-shadow: 0 1px 3px 0 $shadow
+
+=shadow-large()
+  box-shadow: 0 2px 5px 0 $shadow

@@ -1,0 +1,62 @@
+@import vars, mixins
+
+.dropdown
+  z-index: 11
+  background-color: $background
+  border-radius: 5px
+  +shadow-medium
+  display: none
+  position: absolute
+  padding: 12px 16px
+  &__triangle
+    transform: rotate(45deg)
+    width: 11px
+    height: 11px
+    background-color: $background
+    +absoluteTL(-4px, 67px)
+    &_shadow
+      width: 7px
+      height: 7px
+      background-color: $background
+      box-shadow: 0 0 3px 0 $shadow
+      left: 69px
+  &__content
+    width: 236px
+    margin-right: 32px
+    &:last-of-type
+      margin-right: 0
+  &__break
+    display: block
+    margin-bottom: 16px
+  &__title
+    +textCSWH($text, 14px, 400, 32px)
+    text-transform: uppercase
+    border-bottom: 1px solid $border
+    margin-bottom: 8px
+  &__link
+    +textCSWH($textDrop, 14px, 300, 28px)
+    &:hover
+      text-decoration: underline
+    &:active
+      color: $brand
+      filter: saturate(85%)
+  &__offer
+    overflow: hidden
+    +flexCC
+    position: relative
+    margin: 8px 0 -12px 8px
+    &:hover
+      filter: brightness(50%)
+    &:hover > img
+      transform: scale(1.03, 1.03)
+    &:active
+      filter: brightness(75%)
+    & img
+      transition: linear 0.3s
+      width: 284px
+    &_text
+      pointer-events: none
+      max-width: 76px
+      +textCSWH(white, 22px, 900, 28px)
+      text-transform: uppercase
+      +absoluteBR(8px, 10px)
