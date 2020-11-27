@@ -1,4 +1,4 @@
-const template = `
+template = `
     <div class="header__container">
         <div class="header__block">
             <a href="./index.html" class="logo"></a>
@@ -85,7 +85,7 @@ const template = `
 
                         <div class="h-product">
                             <a href="#" class="h-product__link">
-                                <img class="h-product__image" src="https://img1.wbstatic.net/big/new/6970000/6970387-1.jpg" alt="product">
+                                <img class="h-product__image" src="https://img1.wbstatic.net/big/new/6970000/6970387-1.jpg" alt="product" />
 
                                 <div class="h-product__description">
                                     <h2 class="h-product__title">Бермуды - CICLY</h2>
@@ -111,7 +111,7 @@ const template = `
 
                         <div class="h-product">
                             <a href="#" class="h-product__link">
-                                <img class="h-product__image" src="https://img1.wbstatic.net/big/new/11640000/11645771-1.jpg" alt="product">
+                                <img class="h-product__image" src="https://img1.wbstatic.net/big/new/11640000/11645771-1.jpg" alt="product" />
 
                                 <div class="h-product__description">
                                     <h2 class="h-product__title">Блузка - FULPLIT</h2>
@@ -137,7 +137,7 @@ const template = `
 
                         <div class="h-product">
                             <a href="#" class="h-product__link">
-                                <img class="h-product__image" src="https://img2.wbstatic.net/big/new/11630000/11632596-1.jpg" alt="product">
+                                <img class="h-product__image" src="https://img2.wbstatic.net/big/new/11630000/11632596-1.jpg" alt="product" />
 
                                 <div class="h-product__description">
                                     <h2 class="h-product__title">Брюки - BORELI</h2>
@@ -185,22 +185,17 @@ const template = `
     </div>
 `;
 
-let el = document.querySelector('.header');
+el = document.querySelector('.header');
 
 if (el) {
-    el.innerHTML = template;
+    el.insertAdjacentHTML('afterbegin', template);
 }
 
-
-const logo = `
-    <img class="logo__image" src="./images/logo.png" alt="logo">
-    <p class="logo__text">Bran<span class="logo__text_brand">d</span></p>
-`;
 
 el = document.querySelector('.logo');
 
 if (el) {
-    el.innerHTML = logo;
+    el.insertAdjacentHTML('afterbegin', logo);
 }
 
 
