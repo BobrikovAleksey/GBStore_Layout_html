@@ -24,6 +24,10 @@
   +flexJcC
   align-items: center
 
+=flexCE()
+  +flexJcC
+  align-items: flex-end
+
 
 =absoluteTL($top, $left)
   position: absolute
@@ -44,6 +48,14 @@
   position: absolute
   bottom: $bottom
   right: $right
+
+
+=paddingRL($right, $left)
+  padding-right: $right
+  padding-left: $left
+
+=paddingRLSingle($size)
+  +paddingRL($size, $size)
 
 
 =textCSW($color, $size, $weight)

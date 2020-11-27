@@ -1,0 +1,44 @@
+@import vars, mixins
+
+.menu
+  min-height: 50px
+  background-color: $background
+  border-bottom: 1px solid $border
+  &__container
+    width: $MaxWidth
+    +flexCC
+    position: relative
+    margin: 0 auto
+  &__join
+    z-index: 22
+    box-shadow: 0 0 0 2px $background
+    display:  none
+    +absoluteTL(49px, 0)
+  &__list
+    height: 45px
+    +flexCE
+    padding-bottom: 3px
+    margin-top: 5px
+    &:hover
+      border-radius: 3px 3px 0 0
+      box-shadow: 0 1px 3px 0 $shadow
+    &:hover .menu__join
+      display: flex
+    &:hover .menu__dropdown
+      display: flex
+    &_empty:hover
+      box-shadow: none
+  &__link
+    +textCSWH($text, 14px, 700, 12px)
+    text-transform: uppercase
+    display: flex
+    margin: 13px 20px 14px
+    &:hover
+      color: $brandMain
+      filter: saturate(115%)
+    &:active
+      color: $brandMain
+      filter: saturate(85%)
+  &__dropdown
+    +paddingRLSingle(24px)
+    +absoluteTL(50px, 0)
