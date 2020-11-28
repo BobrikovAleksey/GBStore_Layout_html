@@ -1,0 +1,35 @@
+@import vars, mixins
+
+.breadcrumbs
+  background-color: $breadcrumbs
+  &__container
+    width: $MaxWidth
+    height: 148px
+    +flexSbC
+    margin: 0 auto
+  &__title
+    +textCSW($brandMain, 24px, 900)
+    text-transform: uppercase
+  &__menu
+    +flexJcE
+    & li + li:before
+      content: '/'
+      +textCSW($DimGray, 14px, 300)
+      +marginRLSingle(4px)
+  &__link
+    cursor: pointer
+    +textCSWH($DimGray, 14px, 300, 14px)
+    text-transform: uppercase
+    &:hover
+      text-decoration: underline
+    &:active
+      color: $brandMain
+      filter: saturate(85%)
+    &_active
+      pointer-events: none
+      color: $brandMain
+      font-weight: 700
+      &:hover
+        color: $DimGray
+      &:active
+        color: $DimGray
