@@ -4,6 +4,10 @@
   display: flex
   flex-direction: column
 
+=flexJcSa()
+  display: flex
+  justify-content: space-around
+
 =flexJcSb()
   display: flex
   justify-content: space-between
@@ -62,12 +66,23 @@
   +paddingRL($size, $size)
 
 
+=marginTB($top, $bottom)
+  margin-top: $top
+  margin-bottom: $bottom
+
+=marginTBSingle($size)
+  +marginTB($size, $size)
+
 =marginRL($right, $left)
   margin-right: $right
   margin-left: $left
 
 =marginRLSingle($size)
   +marginRL($size, $size)
+
+=marginBL($bottom, $left)
+  margin-bottom: $bottom
+  margin-left: $left
 
 
 =textCSW($color, $size, $weight)

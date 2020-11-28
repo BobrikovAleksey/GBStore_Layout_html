@@ -1,0 +1,110 @@
+@import vars, mixins
+
+.slider
+  background-color: $Platinum
+  &__container
+    overflow: hidden
+    width: $MaxWidth
+    height: 615px
+    position: relative
+    margin: 0 auto
+  &__image
+    margin-left: -230px
+  &__text
+    pointer-events: none
+    border-left: 12px solid $brandMain
+    +absoluteTL(225px, 0)
+  &__title
+    +textCSWH($text, 60px, 900, 45px)
+    text-transform: uppercase
+    +marginBL(15px, 12px)
+  &__subtitle
+    +textCSWH($text, 40px, 900, 31px)
+    text-transform: uppercase
+    margin-left: 12px
+    &_brand
+      color: $brandMain
+
+.categories
+  background-color: $background
+  +marginTBSingle(98px)
+  &__container
+    width: $MaxWidth
+    border-spacing: $MaxWidth - 560px * 2
+    margin: 0 auto
+  &__cell
+    width: 560px
+  &__item
+    overflow: hidden
+    width: 560px
+    +flexCC
+    position: relative
+    &:hover
+      filter: brightness(50%)
+    &:active
+      filter: brightness(75%)
+    &:hover > .categories__image
+      transform: scale(1.03, 1.03)
+  &__image
+    transition: linear 0.3s
+  &__title
+    pointer-events: none
+    height: 82px
+    background-color: $background
+    padding: 20px 16px
+    +absoluteTL(26px, 0)
+    &_h3
+      +textCSWH($brandMain, 30px, 900, 23px)
+      text-transform: uppercase
+      margin-top: 10px
+    &_h4
+      +textCSWH($text, 18px, 900, 14px)
+      text-transform: uppercase
+
+.feature
+  background-color: $DarkJungleGreen
+  margin-top: 98px
+  &__container
+    width: $MaxWidth
+    min-height: 528px
+    +flexAiC
+    margin: 0 auto
+  &__banner
+    position: relative
+  &__title
+    pointer-events: none
+    +absoluteTL(132px, 38px)
+    &_h3
+      max-width: 320px
+      +textCSWH(white, 54px, 700, 44px)
+      text-transform: uppercase
+      margin-bottom: 16px
+    &_h4
+      max-width: 320px
+      +textCSWH(white, 32px, 700, 25px)
+      text-transform: uppercase
+    &_brand
+      color: $brandMain
+  &__content
+    min-height: 528px - 36px * 2
+    +flexDirCol
+    justify-content: space-between
+    margin: 36px auto
+  &__article
+    min-height: 108px
+    +flexJcSa
+    margin-bottom: 20px
+    &:last-child
+      margin-bottom: 0
+  &__icon
+    width: 50px
+    height: 50px
+    margin-right: 20px
+  &__direction
+    width: 230px
+    min-height: 102px
+    &_h3
+      +textCSWH($Snow, 20px, 700, 22px)
+      margin-bottom: 14px
+    &_p
+      +textCSWH($Snow, 14px, 300, 24px)
