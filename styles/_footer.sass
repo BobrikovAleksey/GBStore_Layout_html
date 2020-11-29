@@ -1,0 +1,66 @@
+@import vars, mixins
+
+.footer
+  background-color: $Isabelline
+  &__container
+    width: $MaxWidth
+    height: 78px
+    +flexSbC
+    margin: 0 auto
+  &__text
+    width: $MaxWidth * 0.50
+    +textCSWH($TrolleyGrey, 16px, 400, 18px)
+  &__social
+    display: flex
+  &__link
+    margin-right: 8px
+  &__btn
+    cursor: pointer
+    width: 32px
+    height: 32px
+    +flexCC
+    &:hover
+      filter: saturate(115%)
+    &:active
+      filter: saturate(85%)
+    &_default
+      color: $AshGrey
+      background-color: $WhiteSmoke
+    &_brand
+      color: $WhiteSmoke
+      background-color: $brandMain
+    &_facebook
+      &:hover
+        color: $GhostWhite
+        background-color: $facebook
+      &:active
+        color: $GhostWhite
+        background-color: $facebook
+    &_twitter
+      &:hover
+        color: $twitter
+        background-color: $BlueAlice
+      &:active
+        color: $twitter
+        background-color: $BlueAlice
+    &_linkedin
+      &:hover
+        color: white
+        background-color: $linkedin
+      &:active
+        color: white
+        background-color: $linkedin
+    &_pinterest
+      &:hover
+        color: white
+        background-color: $pinterest
+      &:active
+        color: white
+        background-color: $pinterest
+    &_google
+      &:hover
+        color: $GhostWhite
+        background-color: $google
+      &:active
+        color: $GhostWhite
+        background-color: $google

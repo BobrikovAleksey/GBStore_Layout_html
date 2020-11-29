@@ -1,7 +1,7 @@
 template = `
     <div class="header__container">
         <div class="header__block">
-            <a href="./index.html" class="logo"></a>
+            <a href="./index.html" class="logo header-logo"></a>
 
             <details class="browse">
                 <summary class="browse__summary">Обзор<i class="fa fa-caret-down"></i></summary>
@@ -192,7 +192,7 @@ if (el) {
 }
 
 
-el = document.querySelector('.logo');
+el = document.querySelector('.header-logo');
 
 if (el) {
     el.insertAdjacentHTML('afterbegin', logo);

@@ -790,6 +790,151 @@ ul, li {
   filter: saturate(85%);
 }
 
+.footer-menu {
+  min-height: 274px;
+  display: flex;
+  margin-top: 110px;
+  margin-bottom: 66px;
+}
+.footer-menu__container {
+  width: 1140px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.footer-menu__about {
+  width: 433.2px;
+  color: #898989;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+}
+.footer-menu__about_text {
+  margin-top: 24px;
+}
+.footer-menu__menu {
+  width: 649.8px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-menu__list {
+  width: 170px;
+}
+.footer-menu__title {
+  color: #f16d7f;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+.footer-menu__sublist {
+  margin-bottom: 20px;
+}
+.footer-menu__sublist:last-child {
+  margin-bottom: 0;
+}
+.footer-menu__link {
+  color: #898989;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+}
+.footer-menu__link:hover {
+  text-decoration: underline;
+}
+.footer-menu__link:active {
+  color: #f16d7f;
+  filter: saturate(85%);
+}
+
+.footer {
+  background-color: #ebebeb;
+}
+.footer__container {
+  width: 1140px;
+  height: 78px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.footer__text {
+  width: 570px;
+  color: #7a7a7a;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.footer__social {
+  display: flex;
+}
+.footer__link {
+  margin-right: 8px;
+}
+.footer__btn {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__btn:hover {
+  filter: saturate(115%);
+}
+.footer__btn:active {
+  filter: saturate(85%);
+}
+.footer__btn_default {
+  color: #b2b2b2;
+  background-color: #f6f6f6;
+}
+.footer__btn_brand {
+  color: #f6f6f6;
+  background-color: #f16d7f;
+}
+.footer__btn_facebook:hover {
+  color: #f9f9f9;
+  background-color: #4064ad;
+}
+.footer__btn_facebook:active {
+  color: #f9f9f9;
+  background-color: #4064ad;
+}
+.footer__btn_twitter:hover {
+  color: #1da1f2;
+  background-color: #e8f5fe;
+}
+.footer__btn_twitter:active {
+  color: #1da1f2;
+  background-color: #e8f5fe;
+}
+.footer__btn_linkedin:hover {
+  color: white;
+  background-color: #0077b5;
+}
+.footer__btn_linkedin:active {
+  color: white;
+  background-color: #0077b5;
+}
+.footer__btn_pinterest:hover {
+  color: white;
+  background-color: #e60023;
+}
+.footer__btn_pinterest:active {
+  color: white;
+  background-color: #e60023;
+}
+.footer__btn_google:hover {
+  color: #f9f9f9;
+  background-color: #d65044;
+}
+.footer__btn_google:active {
+  color: #f9f9f9;
+  background-color: #d65044;
+}
+
 .slider {
   background-color: #e8e8e8;
 }
