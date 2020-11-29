@@ -1,0 +1,106 @@
+@import vars, mixins
+
+.feedback
+  height: 438px
+  background: url(../images/banners/feedback.jpg) no-repeat center
+  +flexJcSb
+  position: relative
+  margin-bottom: 98px
+  &__container
+    width: $MaxWidth
+    +flexJcSb
+    margin: 0 auto
+
+.review
+  width: $MaxWidth / 2
+  height: inherit
+  border-right: 1px solid $border
+  +flexWrap
+  padding: 110px 32px 110px 0
+  &__figure
+    display: none
+    &_active
+      display: flex
+  &__photo
+    width: 84px
+    height: 84px
+    border-radius: 50%
+    margin-right: 24px
+  &__block
+    width: $MaxWidth / 2 - 134px
+    margin-top: 4px
+  &__message
+    overflow: hidden
+    text-overflow: ellipsis
+    height: 82px
+    +textCSWH($text, 16px, 400, 26px)
+    font-style: italic
+  &__user
+    &_name
+      +textCSWH($brand, 16px, 700, 15px)
+      +marginTB(8px, 8px)
+    &_city
+      +textCSWH($text, 12px, 300, 12px)
+  &__navigation
+    display: flex
+    +marginTL(40px, 108px)
+  &__switch
+    width: 38px
+    height: 4px
+    background-color: $brand
+    margin-right: 10px
+    &:last-child
+      margin-right: 0
+    &_inactive
+      cursor: pointer
+      background-color: $LightGray
+      &:hover
+        background-color: $brand
+        filter: saturate(115%)
+      &:active
+        background-color: $brand
+        filter: saturate(85%)
+  &__empty
+    +textCSW($placeholder, 16px, 400)
+    font-style: italic
+    text-align: center
+
+.subscribe
+  width: $MaxWidth / 2
+  padding: 140px 40px 110px
+  &__title
+    +textCSWH($text, 24px, 400, 40px)
+    text-transform: uppercase
+    text-align: center
+  &__description
+    +textCSWH($text, 14px, 400, 24px)
+    text-transform: uppercase
+    text-align: center
+    margin-bottom: 30px
+  &__form
+    display: flex
+    justify-content: center
+  &__input
+    width: 304px
+    height: 48px
+    +textCSW($text, 14px, 400)
+    background-color: $Gainsboro
+    border: none
+    border-radius: 22px 0 0 22px
+    +paddingRL(10px, 30px)
+    &:focus
+      background-color: lighten($brand, 30%)
+    &_enabled:focus
+      filter: hue-rotate(180deg)
+  &__button
+    cursor: pointer
+    width: 124px
+    height: 48px
+    +textCSW(white, 14px, 400)
+    background-color: $brand
+    border-radius: 0 22px 22px 0
+    &_enabled
+      &:hover
+        filter: saturate(115%)
+      &:active
+        filter: saturate(85%)
