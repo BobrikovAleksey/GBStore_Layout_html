@@ -1,0 +1,46 @@
+@import vars, mixins
+
+.svg-cart
+  width: 32px
+  height: 29px
+  fill: $text
+  &_small
+    width: 23px
+    height: 22px
+  &_medium
+    width: 26px
+    height: 24px
+  &_main
+    fill: $text
+    &:hover
+      stroke: $brand
+      fill: $background
+    &:active
+      stroke: none
+      fill: $brand
+  &_brand
+    fill: $brand
+  &_white
+    fill: white
+
+.svg-like
+  width: 23px
+  height: 22px
+  fill: $text
+  stroke-width: 1
+  stroke: $text
+  &_brand
+    fill: $brand
+    stroke: $brand
+  &_white
+    fill: white
+    stroke: white
+
+.svg-refresh
+  width: 22px
+  height: 12px
+  fill: $text
+  &_brand
+    fill: $brand
+  &_white
+    fill: white

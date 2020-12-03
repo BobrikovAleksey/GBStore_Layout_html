@@ -20,8 +20,17 @@
 
         <section class="categories"></section>
 
-        <section class="goods">
-
+        <section class="featured">
+            <header class="featured__header">
+                <h2 class="featured__title">Рекомендуемые товары</h2>
+                <p class="featured__direction">Покупайте товары на основе наших рекомендаций</p>
+            </header>
+            <div class="featured__catalog"></div>
+            <footer class="featured__footer">
+                <button class="button button__brand" type="button">
+                    Показать все товары<i class="fa fa-long-arrow-right fa_right"></i>
+                </button>
+            </footer>
         </section>
 
         <section class="feature"></section>
@@ -39,7 +48,7 @@
             <p class="logo__text">Bran<span class="logo__text_brand">d</span></p>
         `;
 
-        let template, el;
+        let template, el, list;
     </script>
     <script src="scripts/validator.js"></script>
     <script src="components/header.js"></script>
@@ -49,6 +58,7 @@
     <script src="components/footer.js"></script>
     <script src="components/home/slider.js"></script>
     <script src="components/home/categories.js"></script>
+    <script src="components/home/featured-catalog.js"></script>
     <script src="components/home/feature.js"></script>
 </body>
 </html>

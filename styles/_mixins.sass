@@ -41,6 +41,12 @@
   align-items: flex-end
 
 
+=gridColsGap($cols, $gap)
+  display: grid
+  grid-template-columns: repeat($cols, 1fr)
+  grid-gap: $gap
+
+
 =absoluteTL($top, $left)
   position: absolute
   top: $top

@@ -47,3 +47,25 @@
     &:active
       background-color: $PlatinumActive
       border: none
+
+.control-button
+  cursor: pointer
+  width: 60px
+  height: 38px
+  +textCSW(white, 13px, 700)
+  border: 1px solid white
+  border-radius: 3px
+  +flexCC
+  padding: 0 12px
+  margin-top: 8px
+  &:hover
+    box-shadow: 0 0 7px white
+  &:active
+    box-shadow: 0 0 1px white
+  &__cart
+    width: 128px
+    margin-bottom: 8px
+  &__icon_right
+    margin-right: 8px
+  &__icon_left
+    margin-left: 8px

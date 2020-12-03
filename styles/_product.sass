@@ -1,0 +1,52 @@
+@import vars, mixins
+
+.product
+  cursor: pointer
+  width: $ProductWidthM
+  min-height: $ProductHeightM + 92px
+  position: relative
+  &:hover .product__image
+    filter: brightness(50%)
+  &:hover .product__control
+    display: flex
+  &__image
+    pointer-events: none
+    overflow: hidden
+    height: $ProductHeightM
+    +flexCC
+    & img
+      width: $ProductWidthM
+  &__description
+    pointer-events: none
+    width: $ProductWidthM
+    min-height: 92px
+    border-spacing: 12px
+    padding: 8px 0
+    & tr
+      width: $ProductWidthM - 28px
+  &__title
+    +textCSWH($text, 13px, 700, 12px)
+    text-transform: uppercase
+  &__price
+    width: ($ProductWidthM - 28px) / 5 * 3
+    +textCSWH($brandMain, 16px, 700, 14px)
+    text-transform: uppercase
+    & .fa
+      font-size: 15px
+      +marginTL(-1px, 4px)
+  &__rating
+    width: ($ProductWidthM - 28px) / 5 * 2
+    +textCSWH($MeatBrown, 15px, 400, 13px)
+    text-align: right
+  &__control
+    width: 128px
+    display: none
+    justify-content: space-between
+    flex-wrap: wrap
+    +absoluteTL($ProductHeightM / 2 - 48px, $ProductWidthM / 2 - 128px / 2)
+  &_mouseenter
+    +shadow-large
+  &_mousedown
+    +shadow-press
+    & .product__image
+      filter: brightness(50%)

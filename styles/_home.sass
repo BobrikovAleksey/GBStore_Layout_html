@@ -61,6 +61,32 @@
       +textCSWH($text, 18px, 900, 14px)
       text-transform: uppercase
 
+.featured
+  background-color: $background
+  +marginTB(98px, 98px)
+  &__header
+    width: $MaxWidth - 400px
+    margin: 0 auto 64px
+  &__title
+    +textCSW($text, 30px, 700)
+    text-align: center
+    margin-bottom: 10px
+  &__direction
+    +textCSW($Manatee, 14px, 400)
+    text-align: center
+  &__catalog
+    width: $MaxWidth
+    +gridColsGap(4, 32px)
+    margin: 0 auto
+  &__footer
+    width: $MaxWidth
+    +flexJcC
+    margin: 0 auto
+    & button
+      height: 48px
+      font-size: 16px
+      margin-top: 48px
+
 .feature
   background-color: $DarkJungleGreen
   +marginTBSingle(98px)
